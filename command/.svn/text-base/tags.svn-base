@@ -1,5 +1,0 @@
-#!/bin/bash
-
-find ./ -name "*.c" -or -name "*.h" -or -name "*.cpp" -or -name "*.S" -or -name "*.s" > cscope.files 
-cscope -Rbkq -i cscope.files
-ctags -R *

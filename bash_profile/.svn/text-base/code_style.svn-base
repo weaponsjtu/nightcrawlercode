@@ -1,6 +1,0 @@
-variables: apple_color, use _ to split word
-function: like variables
-class: Apple_Color
-function: int main( int argv, char* argv[] ) {
-
-}

@@ -1,9 +1,0 @@
-#! /bin/bash
-
-for pid in `ps aux | awk '{ print $8 " " $2 }' | grep -w Z | awk '{print $2}'`
-do
-    echo "kill the zombie process $pid"
-    kill -9 $pid
-done
-
-# kill -HUP `ps -A -ostat,ppid | grep -e '^[Zz]' | awk '{print $2}'`
