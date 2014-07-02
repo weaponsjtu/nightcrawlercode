@@ -1,0 +1,62 @@
+Bash and Google-chrome is enough.
+
+======输入交互======
+1. expect
+
+======下载======
+1. wget/curl
+
+======图片操作======
+1. convert/display
+
+======文本编辑======
+1. vim, plugins: taglist \\
+2. 中文支持， UTF-8
+
+======文本处理======
+1. awk, sed, cut, sort, uniq, wc, grep \\
+2. 按列求和 awk '{s+=$1} END {print s}' mydatafile
+
+======窗口管理======
+1. tmux
+http://www.cnblogs.com/leajon-first/archive/2012/06/26/2564353.html \\
+2. nohup, screen \\
+3. awesome tiling windows
+
+======bash小技巧======
+1. 大规模小文件处理
+find . -name "*.JPEG" | wc -l 比 ls 快多了
+
+======流程图======
+1. dot 画各种图，例如思维图、流程图等等，主要是能直接用脚本语言写
+
+======网络分析与防火墙======
+1. tcpdump 研究网络抓包工具 \\
+2. iptables, ifconfig, netstat, lsof, iftop, nmap \\
+3. netcat
+
+======linux邮件系统======
+1. linux mail server， postfix+dovecot+squirrelmail
+2. mail client, mutt gmail
+
+======浏览器======
+1. 文本浏览器 w3m, elinks \\
+2. chrome+vimium, vchrome
+
+======no mouse======
+1. keynav \\
+2. xdotool: control any GUI window use keyboard and mouse
+
+======latex for PPT======
+1. beamer
+
+======pdf reader======
+1. apvlv
+
+======聊天======
+1. freetalk
+
+======双显示器=====
+1. xrandr
+
+======Betty=====
