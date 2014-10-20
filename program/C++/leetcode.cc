@@ -1,39 +1,68 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <math>
 
 using namespace std;
 
 class Solution{
-	public:
-		/**
-		 * @brief s = "the sky is blue "   result = "blue  is sky the"
-		 * Time O(n), Space O(n)
-		 */
-		void ReverseWords(string& s) {
-      reverse(s.begin(), s.end());
-      cout << s << endl;
-			int i = 0, j = 0;
-			while (i < s.length()) {
-				if (s[i] == ' ') {
-					while (s[++i] == ' ' && i < s.length()) {
-						s.erase(i, 1);
-            i--;
-					}
-				} else {
-					j = i;
-					while (s[++j] != ' ' && j < s.length()) {}
-          for (int k = i; k < i + (j - i) / 2; k++) {
-            char temp = s[k];
-            s[k] = s[j - k + i - 1];
-            s[j - k + i - 1] = temp;
-          }
-					i = j;
-				}
-			}
-			if (s[0] == ' ') s.erase(0, 1);
-			if (s[s.length() - 1] == ' ') s.erase(s.length() - 1, 1);
+    public:
+    /**
+     * @brief s = "the sky is blue "   result = "blue  is sky the"
+     * Time O(n), Space O(1)
+    */
+    void ReverseWords(string& s) {
+        reverse(s.begin(), s.end());
+        cout << s << endl;
+	int i = 0, j = 0;
+	while (i < s.length()) {
+	    if (s[i] == ' ') {
+		while (s[++i] == ' ' && i < s.length()) {
+		    s.erase(i, 1);
+                    i--;
 		}
+	    } else {
+		j = i;
+		while (s[++j] != ' ' && j < s.length()) {}
+                for (int k = i; k < i + (j - i) / 2; k++) {
+                    char temp = s[k];
+                    s[k] = s[j - k + i - 1];
+                    s[j - k + i - 1] = temp;
+                }
+		i = j;
+	    }
+	}
+	if (s[0] == ' ') s.erase(0, 1);
+	if (s[s.length() - 1] == ' ') s.erase(s.length() - 1, 1);
+    }
+
+    /**
+     * @brief s = "the sky is blue "   result = "blue is sky the"
+     * Time O(n), Space O(n)
+    */
+    void ReverseWords_V1( string& s ){
+        string ss;
+        int i = s.length() - 1;
+        while( i >= 0 ){
+            while( i >= 0 && s[i] == ' ' ){
+                i--;
+            }
+            if( i < 0 ) break;
+            if( ss.length() != 0 ){
+                ss.append(' ');
+            }
+            string temp;
+            for( ; i >= 0 && s[i] != ' '; i-- ){
+                temp.push_back( s[i] );
+            }
+            reverse( temp.begin(), temp.end() );
+            ss.append( temp );
+        }
+        s = ss;
+    }
+
+
+
 
     /**
      * @brief Search in Rotated Sorted Array
@@ -66,7 +95,24 @@ class Solution{
     }
 
 
-    void FindMedianSortedArrays(int A[], int m, int B[], int n) {
+    void FindMedianSortedArrays( int A[], int m, int B[], int n ){
+    }
+
+    /**
+     * For example, given the array [2,3,-2,4],
+     * the contiguous subarray [2,3] has the largest product = 6
+     */
+    int maxProduct( int A[], int n ){
+        int min = A[0];
+        int max = A[0];
+        int ans = A[0];
+        for( int i = 1; i < n; i++ ){
+            int temp = min * A[i];
+            min = min( A[i], min( temp, max * A[i] ) );
+            max = max( A[i], max( temp, max * A[i] ) );
+            ans = max( ans, max );
+        }
+        return ans;
     }
 };
 
