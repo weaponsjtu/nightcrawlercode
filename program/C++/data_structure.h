@@ -12,6 +12,11 @@ namespace weipeng {
 
 typedef int ElementType;
 
+template <class T>
+T max( T x, T, y ){
+  return ( x > y ) ? 1 : 0;
+}
+
 class Node {
  public:
   ElementType data;

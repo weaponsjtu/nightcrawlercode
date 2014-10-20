@@ -65,8 +65,49 @@ class Solution{
       return -1;
     }
 
-
+    /**
+     * @brief find the median number of two sorted arrays
+     */
     void FindMedianSortedArrays(int A[], int m, int B[], int n) {
+    }
+
+    void NextPermutation(vector<int> &num) {
+      int len = num.size();
+      int pivot = 0, i = 0;
+      while (i < len - 1) {
+        if (num[i] < num[i + 1]) {
+          pivot = i;
+          i++;
+          while (i < len - 1 && num[i] < num[i + 1]) { i++; }
+        } else {
+          i++;
+        }
+      }
+
+      int bigger = 0, gap = 10000;
+      for (int j = i; j < len; j++) {
+        if (num[j] > num[i] && num[j] - num[i] < gap) {
+          bigger = j;
+          gap = num[j] - num[i];
+        }
+      }
+
+      //swap pivot and bigger
+      //reverse pivot + 1 to the last
+    }
+
+    /**
+     * @brief the k-th of permutation (1, 2, 3, ..., n)
+     * a1 = k / (n-1)!
+     */
+    void KthPermutation(int n, int k) {
+    }
+
+    void IsValidSudoku(const vector< vector<char> >& board) {
+    }
+
+    void TrapWater(int A[], int n) {
+      int *max_left = new int[n]();
     }
 };
 
