@@ -2,6 +2,10 @@
  * @file sol_prac.cc
  * @author Weipeng Zhang
  * @time 2014/1/16 13:28
+ *
+ * fabs(a - b) < 1e-9
+ * x % 2 != 0
+ *
  */
 #include <iostream>
 #include <cstdio>
@@ -36,11 +40,22 @@ class Solution{
 
         /**
          * @brief Remove duplicates element in Sorted Array
+         * time complexity o(n), space complexity o(1)
+         * [1, 1, 2, 2, 4, 5, 5, 5]
          */
         int remove_dumplicates(int A[], int n) {
-            //TODO
+            if (n == 0) return 0;
+            
+            int index = 0;
+            for (int i = 1; i < n; i++) {
+                if (A[index] != A[i]) {
+                    index += 1;
+                    A[index] = A[i];
+                }
+            }
+            return index + 1;
         }
-        
+
         /**
          * @brief Add two numbers, linked list
          */
@@ -81,6 +96,12 @@ class Solution{
             
         }
 
+        /**
+         * @brief Given an input string, reverse the string word by word.
+         */
+        void reverse_words(string &s) {
+
+        }
 };
 
 
