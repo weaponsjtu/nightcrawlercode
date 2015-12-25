@@ -1,0 +1,198 @@
+/***************************************************************************/
+/*                              测试&临时规则                              */
+/***************************************************************************/
+/*#sidebar{max-width:none !important;}*/
+/*#content browser { 
+overflow-y:hidden !important; overflow-x:auto !important;}*/
+#sidebar-title {
+text-align:         center !important;}
+#contentAreaContextMenu menuitem,#contentAreaContextMenu menu{
+margin:             0 -22px 0 -22px !important;}
+#TabsToolbar{
+margin-top: -5px !important;
+margin-left:        -38px !important;
+height: 5px !important;
+}
+.tabbrowser-tabs{
+    padding-left: 40px !important;
+    height: 5px !important;
+}
+.searchbar-textbox{
+    margin-left:3px !important;
+    display: none !important;
+}
+#nav-bar {display: none;}
+/*#nav-bar[tabsontop=true],
+#nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + toolbar,
+#nav-bar[tabsontop=true][collapsed=true]:not([customizing]) + #customToolbars + #PersonalToolbar {
+background-image: none;*/
+#nav-bar{background-image:none !important;background-color:#FFFFFF !important;}
+#appmenu-button,dropmarker{
+display:        none !important;}
+/***************************************************************************/
+/*                                右键透明                                 */
+/***************************************************************************/
+popup:not(#autoscroller), menupopup, #appmenuSecondaryPane, #appmenuPrimaryPane{
+color:              black !important;
+-moz-appearance:    -moz-win-glass !important;
+background:         transparent !important;
+background-image:   url("/icons/bg.png") !important;
+border:             none !important;
+padding:            0px 5px 5px 5px !important;
+margin:             0px !important;
+}
+/***************************************************************************/
+/*                                字体相关                                 */
+/***************************************************************************/
+ *{
+font-style:normal !important;
+font-family:        "Open Sans",方正准圆_GBK !important;
+/*text-shadow:        0px 0px 1px rgb(150,150,150) !important;*/}
+/***************************************************************************/
+/*                            隐藏非常用右键菜单                           */
+/***************************************************************************/
+/*隐藏页面右键菜单*/
+#context-forward, /*前进*/
+#context-back, /*后退*/
+#context-reload, /*刷新*/
+#context-stop, /*停止*/
+#context-sep-stop, /*停止下面的分割线*/
+#context-bookmarkpage, /*此页面加入书签*/
+#context-sendlink, /*发送链接到*/
+#context-sendpage, /*发送页面链接到*/
+#context-sep-copyimage, /*复制图片下面的分割线*/
+/*#context-saveimage, 图片另存为*/
+#context-sendimage, /*发送图片到*/
+#context-setDesktopBackground, /*设置为桌面背景*/
+/*#context-savelink, 链接另存为*/
+#context-openlink, /*在新窗口打开链接*/
+#context-sep-open, /*打开新窗口下面的分割线*/
+#context-bookmarklink, /*此链接加入书签*/
+#context-sep-selectall, /*全选下面的分割线*/
+#context-selectall,/*全选*/
+#context-searchselect, /*使用默认搜索引擎搜索关键字*/
+#spell-check-enabled, /*拼写检查*/
+#spell-separator, /*拼写检查分割线*/
+#inspect-separator,/*Inspect Element分割线*/
+.sp-span-someinfo
+/* #context-inspect Inspect Element
+#contentAreaContextMenu .menu-iconic-icon{display: none !important;}
+*/
+{display: none !important;}
+/***************************************************************************/
+/*                        是否启用透明                                     */
+/*************************************************************************/
+.searchbar-textbox,#urlbar,#urlbar > *,
+.findbar-textbox,
+.searchbar-engine-button,
+.searchbar-textbox,#urlbar{
+border:             0px #19A31E solid !important;
+border-radius:      0 !important;
+background-color:   transparent !important;}
+/*.tabs-newtab-button{-moz-appearance:-moz-win-glass !important;background-image:none !important;}*/
+/* #PersonalToolbar{-moz-appearance:-moz-win-glass !important;}  */
+/***************************************************************************/
+/*                    地址栏&搜索栏                                        */
+/************************************************************************** */
+.searchbar-textbox,#urlbar{
+box-shadow:inset 0 0 1px #3A3A3A !important;
+margin-top:0px !important;
+margin-right:0px !important;
+border:2px solid orange !important;
+color:  #006600 !important;
+font-size:12pt !important;
+height: 5px !important;
+border-radius:  0px !important;
+}
+/*.urlbar-input-box{
+text-align: center !important;
+}*/
+.textbox-contextmenu{
+text-align:     left !important;}
+#page-proxy-favicon{
+display:        none !important;}/* 隐藏网站图标 */
+#go-button{
+display:        none !important;}/* 隐藏GO图标 */
+.autocomplete-history-dropmarker, .urlbar-history-dropmarker{display:none !important;}
+/***************************************************************************/
+/*                     火狐菜单                                            */ 
+/**************************************************************************
+
+#appmenu-button{
+-moz-appearance:-moz-win-glass !important;
+background:     transparent !important;
+color:          black !important;
+border-radius:  2px 5px !important;
+padding:        2px 0px 0px 5px !important;
+margin-top:     0px !important;
+}
+toolbar:not([mode="text"]) #appmenu-toolbar-button > .toolbarbutton-icon,
+toolbar:not([mode="text"]) #appmenu-button > .button-box .button-icon {
+list-style-image:   none !important;}
+#appmenu-button .button-box .box-inherit:before {
+content: "OWEN's Firefox" !important;
+font-family:        FZZhunYuan-M02,"Century Gothic",Consolas,Broadway !important;
+font-size:          11pt !important;
+}
+#appmenu-button .button-box .box-inherit .button-text {display: none !important;}
+#appmenu-button-container{margin-left:0px !important;}*/
+/***************************************************************************/
+/*                      书签栏                                             */
+/***************************************************************************/
+toolbarbutton[class="bookmark-item"]>.toolbarbutton-icon{
+display:            none !important;}
+toolbarbutton.bookmark-item{
+margin-top:         3px !important;
+padding:            0px !important;}
+#PersonalToolbar{
+margin-top:-2px !important;
+background-image:   linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+background-color:   orange !important;
+height:     20px !important;
+font-size:          10pt !important;}
+/***************************************************************************/ 
+/*                       标签相关                                          */
+/**************************************************************************/
+.tabbrowser-tab:not([selected]){
+opacity:            .50 !important;}
+.tabbrowser-tab{ 
+opacity:            .99 !important;
+background:         transparent !important;
+height: 5px !important;
+}
+.tabbrowser-tab{ 
+max-width:          80px !important;
+min-width:          40px !important;}
+
+.tabbrowser-tab .tab-text[selected="true"]{
+font-weight:        bold !important;}
+.tab-throbber,.tabbrowser-tab .tab-icon-image{
+margin-left:        5px !important;}
+.tab-close-button{
+display:            none !important;}
+
+.tabbrowser-tabs .tab-text{
+text-align:         center !important;}
+.tabbrowser-tab[selected="true"]{
+min-width:250px !important;
+}
+/***************************************************************************/ 
+/*                           标签载入动画                                  */
+/**************************************************************************
+.tab-throbber[progress][busy]{list-style-image: url("file:///C:/Users/owen/AppData/Roaming/Mozilla/Firefox/Profiles/yz0cpilz.default/chrome/icons/tabbrowser/loading.png") !important;}
+.tab-throbber[busy]{list-style-image: url("file:///C:/Users/owen/AppData/Roaming/Mozilla/Firefox/Profiles/yz0cpilz.default/chrome/icons/tabbrowser/connecting.png") !important;}*/
+/***************************************************************************/ 
+/*                           其他细节                                      */
+/***************************************************************************/
+window[stylish-url="about:addons"]:not([inFullscreen]) toolbar:not([collapsed="true"]){
+visibility: visible !important}/*About:addons显示地址栏*/
+#star-button,#statusbar-display {
+display:        none !important;}/* 隐藏状态栏 */
+/*#appmenuSecondaryPane .menu-iconic-icon{
+display:        none !important;}
+#appmenuSecondaryPane-spacer,#appmenuPrimaryPane{
+display:        none !important;} */
+/*#history-menu,#bookmarksMenu,#helpMenu{display:none !important;}#file-menu,#edit-menu,#view-menu,*/
+/***************************************************************************/
+/*                       滚动条                                            */
+/***************************************************************************/
